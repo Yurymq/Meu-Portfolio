@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Protótipo de IA para organizar descrições de objetos perdidos e encontrados.">
+  <title>Assistente IA | Achados e Perdidos</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <p class="eyebrow">PROTÓTIPO DE PORTFÓLIO · IA APLICADA</p>
+      <h1>Achados e Perdidos <span>com IA</span></h1>
+      <p class="intro">Organize a descrição de um objeto e encontre registros que podem corresponder.</p>
+    </header>
+
+    <section class="panel" aria-labelledby="form-title">
+      <h2 id="form-title">Descreva o objeto</h2>
+      <form id="analysis-form">
+        <label for="description">O que foi perdido ou encontrado?</label>
+        <textarea id="description" name="description" minlength="12" maxlength="1000" required
+          placeholder="Ex.: Encontrei um estojo azul com duas canetas perto da biblioteca..." ></textarea>
+        <p class="hint">Não informe nomes, telefones, documentos ou outros dados pessoais.</p>
+        <button id="submit-button" type="submit">Analisar descrição</button>
+      </form>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="results" class="panel results" aria-labelledby="results-title" hidden>
+      <h2 id="results-title">Resultado da análise</h2>
+      <div class="result-grid">
+        <div><span class="label">Categoria</span><strong id="category"></strong></div>
+        <div><span class="label">Descrição organizada</span><p id="normalized"></p></div>
+        <div><span class="label">Palavras-chave</span><div id="keywords" class="chips"></div></div>
+      </div>
+      <h3>Possíveis correspondências</h3>
+      <p class="hint">A pontuação é uma comparação textual aproximada, não uma confirmação de que seja o mesmo objeto.</p>
+      <div id="matches" class="matches"></div>
+    </section>
+
+    <footer>Protótipo acadêmico. Toda sugestão deve ser revisada por uma pessoa.</footer>
+  </main>
+  <script src="/static/script.js" defer></script>
+</body>
+</html>
