@@ -55,4 +55,4 @@ Consulte [ROADMAP.md](./ROADMAP.md) para acompanhar o que falta validar, documen
 
 ---
 
-*Portfólio em evolução. Atualizado em outubro de 2026.*
+*Portfólio em evolução. Atualizado em novembro de 2026.*
